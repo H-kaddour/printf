@@ -6,7 +6,7 @@
 /*   By: hkaddour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:24:02 by hkaddour          #+#    #+#             */
-/*   Updated: 2022/01/12 17:55:34 by hkaddour         ###   ########.fr       */
+/*   Updated: 2022/01/12 20:00:43 by hkaddour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int	ft_putstr(char *s)
 	return (i);
 }
 
+//int	ft_lhex(int d)
+//{
+//	
+//}
+
 int	ft_putnbr(int n)
 {
 	int i;
@@ -42,23 +47,37 @@ int	ft_putnbr(int n)
 	i = 0;
 	if (n < 0)
 	{
-		ft_putchar('-');
+		i += ft_putchar('-');
 		if (n == -2147483648)
 		{
-			ft_putchar('2');
+			i += ft_putchar('2');
 			n %= 1000000000;
 		}
-		ft_putnbr(-n);
+		i += ft_putnbr(-n);
 	}
 	else if (n >= 0 && n < 10)
 	{
-		ft_putchar(n + '0');
+		i += ft_putchar(n + '0');
 	}
 	else
 	{
 		i += ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		i += ft_putnbr(n % 10);
 	}
 	return (i);
 }
 
+int ft_unsigned(size_t n)
+{
+	size_t i;
+
+	i = 0;
+	if (n >= 0 && n < 10)
+		i += ft_putchar(n + '0');
+	else
+	{
+		i += ft_putnbr(n / 10);
+		i += ft_putnbr(n % 10);
+	}
+	return (i);
+}
