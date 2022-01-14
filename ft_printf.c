@@ -6,7 +6,7 @@
 /*   By: hkaddour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:14:45 by hkaddour          #+#    #+#             */
-/*   Updated: 2022/01/12 20:02:19 by hkaddour         ###   ########.fr       */
+/*   Updated: 2022/01/14 19:16:43 by hkaddour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@ int	ft_params(char str, int i, va_list args)
 		i += ft_putnbr(va_arg(args, int));
 	else if (str == 'c')
 		i += ft_putchar(va_arg(args, int));
-	//else if (str == 'x')
-	//	i += ft_lhex(va_arg(args, char));
-	//else if (str == 'X')
-	//	i += ft_uhex(va_arg(args, char));
+	else if (str == 'x')
+		i += ft_lhex(va_arg(args, unsigned int));
+	else if (str == 'X')
+		i += ft_uhex(va_arg(args, unsigned int));
 	else if (str == 'u')
-		i += ft_unsigned(va_arg(args, int));
-	//else if (str == 'p')
-	//	i += ft_pointer(va_arg(args, char));
+		i += ft_unsigned(va_arg(args, unsigned int));
+	else if (str == 'p')
+		i += ft_pointer(va_arg(args, unsigned long int));
+	else if (str == '%')
+		i += ft_putchar(str);
 	return (i);
 }
 
@@ -58,8 +60,8 @@ int	ft_printf(const char *str, ...)
 
 int main()
 {
-	char *arr="kaddouri";
-	int n = ft_printf("hicham %s %d %c %i %u", arr, 1234, 'j', 88, 78);
+	//char *arr="kaddouri";
+	int n = ft_printf("%x %X", -1, -1);
 	printf("\n%d", n);
 }
 
