@@ -6,7 +6,7 @@
 /*   By: hkaddour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 11:14:45 by hkaddour          #+#    #+#             */
-/*   Updated: 2022/01/14 19:16:43 by hkaddour         ###   ########.fr       */
+/*   Updated: 2022/01/15 17:38:35 by hkaddour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ int	ft_params(char str, int i, va_list args)
 	else if (str == 'u')
 		i += ft_unsigned(va_arg(args, unsigned int));
 	else if (str == 'p')
-		i += ft_pointer(va_arg(args, unsigned long int));
+	{
+		i += ft_putstr("0x");
+		i += ft_lhex(va_arg(args, unsigned long));
+	}
 	else if (str == '%')
 		i += ft_putchar(str);
 	return (i);
@@ -57,16 +60,3 @@ int	ft_printf(const char *str, ...)
 	}
 	return (i);
 }
-
-int main()
-{
-	//char *arr="kaddouri";
-	int n = ft_printf("%x %X", -1, -1);
-	printf("\n%d", n);
-}
-
-
-
-
-        //str:                             //args
-//("hicham %% %c %s %p %d %i %u %x %X", c, s, p, d, i, u, x, X);

@@ -6,12 +6,12 @@
 /*   By: hkaddour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:24:02 by hkaddour          #+#    #+#             */
-/*   Updated: 2022/01/14 19:11:27 by hkaddour         ###   ########.fr       */
+/*   Updated: 2022/01/15 17:37:56 by hkaddour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <string.h>
+
 int	ft_putchar(char s)
 {
 	write(1, &s, 1);
@@ -23,6 +23,11 @@ int	ft_putstr(char *s)
 	int	i;
 
 	i = 0;
+	if (!s)
+	{
+		i += write(1, "(null)", 6);
+		return (6);
+	}
 	while (s[i])
 	{
 		write(1,&s[i], 1);
@@ -40,7 +45,7 @@ int	ft_lhex(unsigned long d)
 	hex = "0123456789abcdef";
 	if (d < 16)
 		i += write(1, hex + d, 1);
-	if (d >= 16)
+	else if (d >= 16)
 	{
 		i += ft_lhex(d / 16);
 		i += ft_lhex(d % 16);
@@ -48,7 +53,7 @@ int	ft_lhex(unsigned long d)
 	return (i);
 }
 
-int	ft_uhex(unsigned d)
+int	ft_uhex(unsigned long d)
 {
 	int		i;
 	char	*hex;
@@ -59,33 +64,8 @@ int	ft_uhex(unsigned d)
 		i += write(1, hex + d, 1);
 	else if (d >= 16)
 	{
-		i += ft_lhex(d / 16);
-		i += ft_lhex(d % 16);
-	}
-	return (i);
-}
-
-int	ft_pointer(unsigned long int n)
-{
-	int		i;
-	char	*hex;
-	char	*str;
-
-	i = 0;
-	hex = "0123456789abcdef";
-	str = "0x";
-	i += ft_putstr(str);
-	if ( n < 0)
-	{
-		i += ft_putchar('-');
-		ft_pointer(-n);
-	}
-	if (n >= 0 && n < 16)
-		i += ft_putchar(*hex + n);
-	else
-	{
-		i += ft_pointer(n / 16);
-		i += ft_pointer(n % 16);
+		i += ft_uhex(d / 16);
+		i += ft_uhex(d % 16);
 	}
 	return (i);
 }
