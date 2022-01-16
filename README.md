@@ -22,3 +22,15 @@ First manual it in the terminal `man stdarg`.
 7. A video of how variadic variables works: [Check it out.](https://www.youtube.com/watch?v=FgvrnYScdH8&t=108s)
 8. The secret of printf: [Check it out.](https://www.youtube.com/watch?v=Y9kUWsyyChk&t=751s)
 9. How printf works: [Check it out.](https://www.youtube.com/watch?v=lxhrr7kgdqw&t=924s)
+
+**Things i learned in Makefile in this project**
+Add color for every excution:
+```
+W=$'\x1b[33m
+BLUE=$'\x1b[34m
+CYAN=$'\x1b[36m
+```
+You can add any color.
+I print it cuz i made the command work silently, `@` work siently.
+![image](image/colors.png)
+`@echo "$(CYAN) compile $(YELLOW) $^ $(BLUE)to $@"`
