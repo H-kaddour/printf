@@ -1,2 +1,2 @@
 # printf
-![image](image/printf.png#gh-light-mode-only)
+![image](image/printf.png)
