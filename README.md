@@ -20,4 +20,5 @@ First manual it in the terminal `man stdarg`.
 6. [Book of how Variadic variables works in assembly.] (https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf)
 7. [A video of how variadic variables works.] (https://www.youtube.com/watch?v=FgvrnYScdH8&t=108s)
 8. [The secret of printf.] (https://www.youtube.com/watch?v=Y9kUWsyyChk&t=751s)
-9. [How printf works.] (https://www.youtube.com/watch?v=lXhRr7kgdQw&t=924s)
+9. [how printf works.] (https://www.youtube.com/watch?v=lxhrr7kgdqw&t=924s)
+[how printf works.] (https://www.youtube.com/watch?v=lxhrr7kgdqw&t=924s)
