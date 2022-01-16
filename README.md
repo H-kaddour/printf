@@ -12,7 +12,7 @@ https://github.com/Tripouille/printfTester
 First you need to learn about `Variadic variales` the structure of them and how they work behind the scene this are some links to learn about them:
 First manual it in the terminal `man stdarg`.
 #####What is Variadic variables 
-1. [Geekforgeek.] (https://www.geeksforgeeks.org/variadic-functions-in-c/)
+1. [Geekforgeek] (https://www.geeksforgeeks.org/variadic-functions-in-c/).
 2. [GNU.] (https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html)
 3. [CPPreference.] (https://en.cppreference.com/w/c/variadic)
 4. [To know the behavior of va_list in the code.] (https://www.thegeekstuff.com/2017/05/c-variadic-functions/)
