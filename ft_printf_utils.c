@@ -6,7 +6,7 @@
 /*   By: hkaddour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:24:02 by hkaddour          #+#    #+#             */
-/*   Updated: 2022/01/15 17:37:56 by hkaddour         ###   ########.fr       */
+/*   Updated: 2022/01/16 17:03:58 by hkaddour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_putstr(char *s)
 	}
 	while (s[i])
 	{
-		write(1,&s[i], 1);
+		write(1, &s[i], 1);
 		i++;
 	}
 	return (i);
@@ -70,36 +70,9 @@ int	ft_uhex(unsigned long d)
 	return (i);
 }
 
-int	ft_putnbr(int n)
+int	ft_unsigned(size_t n)
 {
-	int i;
-
-	i = 0;
-	if (n < 0)
-	{
-		i += ft_putchar('-');
-		if (n == -2147483648)
-		{
-			i += ft_putchar('2');
-			n %= 1000000000;
-		}
-		i += ft_putnbr(-n);
-	}
-	else if (n >= 0 && n < 10)
-	{
-		i += ft_putchar(n + '0');
-	}
-	else
-	{
-		i += ft_putnbr(n / 10);
-		i += ft_putnbr(n % 10);
-	}
-	return (i);
-}
-
-int ft_unsigned(size_t n)
-{
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (n >= 0 && n < 10)
