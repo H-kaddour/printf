@@ -8,10 +8,10 @@ https://cdn.intra.42.fr/pdf/pdf/37929/en.subject.pdf
 ```
 https://github.com/Tripouille/printfTester
 ```
-###List of thing you gonna pick up during this project:
+##List of thing you gonna pick up during this project:
 First you need to learn about `Variadic variales` the structure of them and how they work behind the scene this are some links to learn about them:
 First manual it in the terminal `man stdarg`.
-#####What is Variadic variables 
+**What is Variadic variables:**
 1. GG: [Check it out.](https://www.geeksforgeeks.org/variadic-functions-in-c/)
 2. GNU: [Check it out.](https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html)
 3. CPP: [Check it out.](https://en.cppreference.com/w/c/variadic)
