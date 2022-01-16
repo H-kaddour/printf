@@ -26,11 +26,11 @@ First manual it in the terminal `man stdarg`.
 **Things i learned in Makefile in this project**
 Add color for every excution:
 ```
-W=$'\x1b[33m
+YELLOW=$'\x1b[33m
 BLUE=$'\x1b[34m
 CYAN=$'\x1b[36m
 ```
 You can add any color.
 I print it cuz i made the command work silently, `@` work siently.
 ![image](image/colors.png)
-`@echo "$(CYAN) compile $(YELLOW) $^ $(BLUE)to $@"`
+```@echo "$(CYAN) compile $(YELLOW) $^ $(BLUE)to $@"```
