@@ -13,6 +13,7 @@ First you need to learn about `Variadic variales` the structure of them and how 
 First manual it in the terminal `man stdarg`.
 #####What is Variadic variables 
 1. jdkfdkjj[Geekforgeek] (https://www.geeksforgeeks.org/variadic-functions-in-c/).
+
 2. [GNU.] (https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html)
 3. [CPPreference.] (https://en.cppreference.com/w/c/variadic)
 4. [To know the behavior of va_list in the code.] (https://www.thegeekstuff.com/2017/05/c-variadic-functions/)
@@ -21,4 +22,5 @@ First manual it in the terminal `man stdarg`.
 7. [A video of how variadic variables works.] (https://www.youtube.com/watch?v=FgvrnYScdH8&t=108s)
 8. [The secret of printf.] (https://www.youtube.com/watch?v=Y9kUWsyyChk&t=751s)
 9. [how printf works.] (https://www.youtube.com/watch?v=lxhrr7kgdqw&t=924s)
-[how printf works.] (https://www.youtube.com/watch?v=lxhrr7kgdqw&t=924s)
+
+[how printf works.](https://www.youtube.com/watch?v=lxhrr7kgdqw&t=924s)
