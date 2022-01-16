@@ -1,2 +1,2 @@
 # printf
-![image](../image/printf.png)
+![image](image/printf.png)
