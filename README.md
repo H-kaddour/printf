@@ -9,7 +9,7 @@ https://cdn.intra.42.fr/pdf/pdf/37929/en.subject.pdf
 https://github.com/Tripouille/printfTester
 ```
 ### List of thing you gonna pick up during this project:
-First you need to learn about `Variadic variales` the structure of them and how they work behind the scene this are some links to learn about them:
+:wave:First you need to learn about `Variadic variales` the structure of them and how they work behind the scene this are some links to learn about them:
 First manual it in the terminal `man stdarg`.
 
 **What is Variadic variables:**
@@ -22,6 +22,7 @@ First manual it in the terminal `man stdarg`.
 7. A video of how variadic variables works: [Check it out.](https://www.youtube.com/watch?v=FgvrnYScdH8&t=108s)
 8. The secret of printf: [Check it out.](https://www.youtube.com/watch?v=Y9kUWsyyChk&t=751s)
 9. How printf works: [Check it out.](https://www.youtube.com/watch?v=lxhrr7kgdqw&t=924s)
+10. A brief on printf: [Check it out](https://csnotes.medium.com/ft-printf-tutorial-42project-f09b6dc1cd0e)
 
 **Things i learned in Makefile in this project**
 Add color for every excution:
@@ -36,3 +37,9 @@ I print it cuz i made the command work silently, `@` work siently.
 ```
 @echo "$(CYAN) compile $(YELLOW) $^ $(BLUE)to $@"
 ```
+
+# My final point:
+![image](image/point.png)
+I didn't have time to work in the bonus.
+
+**Thank you for reading, have a good one :rocket:.**
