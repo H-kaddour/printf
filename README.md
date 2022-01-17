@@ -33,4 +33,6 @@ CYAN=$'\x1b[36m
 You can add any color.
 I print it cuz i made the command work silently, `@` work siently.
 ![image](image/colors.png)
-```@echo "$(CYAN) compile $(YELLOW) $^ $(BLUE)to $@"```
+```
+@echo "$(CYAN) compile $(YELLOW) $^ $(BLUE)to $@"
+```
